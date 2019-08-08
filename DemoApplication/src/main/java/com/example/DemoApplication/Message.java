@@ -4,14 +4,23 @@ import java.io.Serializable;
 
 public class Message implements Serializable {
 
-    private String text;
+    private String todoName;
+    private String todoTime;
 
-    public String getText() {
-        return text;
+    public String getName() {
+        return todoName;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public String todoTime() {
+        return todoTime;
+    }
+
+    public void setTodoName(String todoName) {
+        this.todoName = todoName;
+    }
+
+    public void setTodoTime(String todoTime) {
+        this.todoTime = todoTime;
     }
 
 }

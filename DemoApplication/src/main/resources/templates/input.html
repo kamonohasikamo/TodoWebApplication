@@ -5,11 +5,18 @@
     <title>Todoリスト</title>
 </head>
 <body>
+<div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: #00FFFF">
+    <a href="http://localhost:8080/input"><img th:src="@{/images/Rogo.png}"></a>
+    <div align="right">
+        <a href="http://localhost:8080/input">検索</a>
+    </div>
+</div>
 <form action="#" th:action="@{/confirm}" th:object="${message}" method="post">
     <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
         <p>新しいTodoを追加する。</p>
-        <p>Todo名</p><input type="text" class="form-control" th:field="*{text}" />
-        <button type="submit" class="btn btn-default">送信</button>
+        <p>Todo名 : </p><input type="text" th:field="*{todoName}" />
+        <p>期限 : </p><input type="text" th:field="*{todoTime}" />
+        <input type="submit" value="送信" />
     </div>
 </form>
 </body>

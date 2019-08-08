@@ -11,14 +11,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class SpringSampleController {
 
-    @RequestMapping(value = "/input", method = RequestMethod.GET)
-    public String input(Model model){
+    @RequestMapping("/")
+    public String todoName(Model model){
+        model.addAttribute("message", new Message());
+        return "input";
+    }
+
+    @RequestMapping("/input")
+    public String todoTime(Model model){
         model.addAttribute("message", new Message());
         return "input";
     }
 
     @RequestMapping(value = "/confirm", method = RequestMethod.POST)
-    public String confirm(@ModelAttribute("message") Message form) {
+    public String confirm(@ModelAttribute Message form, Model model) {
+        model.addAttribute("message", form);
         return "confirm";
     }
 
