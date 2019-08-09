@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>検索画面</title>
+</head>
+<body>
+<div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: #00FFFF">
+    <a href="http://localhost:8080/input"><img th:src="@{/images/Rogo.png}"></a>
+</div>
+<div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
+    <p>検索したいTodoのタイトルを入力してください。</p>
+    <form>
+        <input type="text" th:valueth:field="*{todoName}" />
+        <input type="submit" value="検索" />
+    </form>
+</div>
+</body>
+</html>

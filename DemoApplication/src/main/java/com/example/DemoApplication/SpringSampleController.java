@@ -35,4 +35,10 @@ public class SpringSampleController {
         return "confirm";
     }
 
+    @RequestMapping(value = "/searchTodo")
+    public String searchTodo(@ModelAttribute Message form, Model model) {
+        model.addAttribute("message", form);
+        return "searchTodo";
+    }
+
 }
