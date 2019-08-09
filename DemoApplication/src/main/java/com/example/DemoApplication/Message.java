@@ -1,17 +1,15 @@
 package com.example.DemoApplication;
 
-import java.io.Serializable;
-
-public class Message implements Serializable {
+public class Message {
 
     private String todoName;
     private String todoTime;
 
-    public String getName() {
+    public String getTodoName() {
         return todoName;
     }
 
-    public String todoTime() {
+    public String getTodoTime() {
         return todoTime;
     }
 

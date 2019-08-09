@@ -11,13 +11,13 @@
         <a href="http://localhost:8080/input">検索</a>
     </div>
 </div>
-<form action="#" th:action="@{/confirm}" th:object="${message}" method="post">
-    <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
-        <p>新しいTodoを追加する。</p>
-        <p>Todo名 : </p><input type="text" th:field="*{todoName}" />
-        <p>期限 : </p><input type="text" th:field="*{todoTime}" />
+<div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
+    <p>新しいTodoを追加する。</p>
+    <form action="#" th:action="@{/confirm}" th:object="${message}" method="post">
+        <p>todo名: <input type="text" th:field="*{todoName}" /></p>
+        <p>期限: <input type="text" th:field="*{todoTime}" /></p>
         <input type="submit" value="送信" />
-    </div>
-</form>
+    </form>
+</div>
 </body>
 </html>
