@@ -44,7 +44,7 @@ JavaでTodoリストを管理するWebアプリケーションを作成します
   varchar(255)
  * todo_time : todo deadline<br>
   varchar(255)
-```MySQL:createDataBase
+```sql:createDataBase
  CREATE DATABASE sample_db;
  use sample_db;
  CREATE TABLE todolist (id int(5), todo_name varchar(255), todo_time varchar(255));
@@ -58,7 +58,7 @@ JavaでTodoリストを管理するWebアプリケーションを作成します
   varchar(255)
  * todo_time : Todoの期限を格納する<br>
   varchar(255)
-```MySQL:createDataBase
+```sql:createDataBase
  CREATE DATABASE sample_db;
  use sample_db;
  CREATE TABLE todolist (id int(5), todo_name varchar(255), todo_time varchar(255));
