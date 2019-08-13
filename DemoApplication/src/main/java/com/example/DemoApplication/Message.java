@@ -2,10 +2,11 @@ package com.example.DemoApplication;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "todolist")
-public class Message {
+public class Message implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;

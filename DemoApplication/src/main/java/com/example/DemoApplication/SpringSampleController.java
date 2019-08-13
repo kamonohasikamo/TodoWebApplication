@@ -31,7 +31,9 @@ public class SpringSampleController {
 
     @RequestMapping(value = "/confirm", method = RequestMethod.POST)
     public String confirm(@ModelAttribute Message form, Model model) {
-        model.addAttribute("message", form);
+        Message addMsg = todoSer.addTodoList(form);
+        model.addAttribute("messageList", addMsg);
+
         List<Message> msgList = todoSer.showAllData();
         model.addAttribute("messageList", msgList);
 
@@ -45,5 +47,4 @@ public class SpringSampleController {
         model.addAttribute("message", form);
         return "searchTodo";
     }
-
 }
