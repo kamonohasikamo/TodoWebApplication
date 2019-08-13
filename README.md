@@ -34,3 +34,32 @@ JavaでTodoリストを管理するWebアプリケーションを作成します
   spring.jpa.database=MYSQL
   spring.jpa.hibernate.ddl-auto=update
   ```
+
+## Database Infomation - データベースの情報
+* DataBaseName : sample_db
+* TableName : todolist
+ * Id : There is no particular meaning.(?)<br>
+  Int(5)
+ * todo_name : todo title<br>
+  varchar(255)
+ * todo_time : todo deadline<br>
+  varchar(255)
+```MySQL:createDataBase
+ CREATE DATABASE sample_db;
+ use sample_db;
+ CREATE TABLE todolist (id int(5), todo_name varchar(255), todo_time varchar(255));
+```
+
+* データベース名 : sample_db
+* テーブル名 : todolist
+ * Id : 特に意味はない(?)<br>
+  Int(5)
+ * todo_name : Todo名を格納する<br>
+  varchar(255)
+ * todo_time : Todoの期限を格納する<br>
+  varchar(255)
+```MySQL:createDataBase
+ CREATE DATABASE sample_db;
+ use sample_db;
+ CREATE TABLE todolist (id int(5), todo_name varchar(255), todo_time varchar(255));
+```
