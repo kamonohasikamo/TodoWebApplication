@@ -36,15 +36,13 @@ public class SpringSampleController {
 
         List<Message> msgList = todoSer.showAllData();
         model.addAttribute("messageList", msgList);
-
-        List<Message> todoNameList = todoSer.searchTodoName("いえい");
-        model.addAttribute("todoNameList", todoNameList);
         return "confirm";
     }
 
-    @RequestMapping(value = "/searchTodo")
+    @RequestMapping(value = "/searchTodo", method = RequestMethod.GET)
     public String searchTodo(@ModelAttribute Message form, Model model) {
-        model.addAttribute("message", form);
+        List<Message> todoNameList = todoSer.searchTodoName(form.getTodoName());
+        model.addAttribute("todoNameList", todoNameList);
         return "searchTodo";
     }
 }

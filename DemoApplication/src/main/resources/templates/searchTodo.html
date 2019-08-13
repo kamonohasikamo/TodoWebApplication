@@ -10,10 +10,18 @@
 </div>
 <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
     <p>検索したいTodoのタイトルを入力してください。</p>
-    <form>
-        <input type="text" th:valueth:field="*{todoName}" />
+    <form action="#" th:action="@{/searchTodo}" th:object="${message}" method="get">
+        <input type="text" th:field="*{todoName}" />
         <input type="submit" value="検索" />
     </form>
 </div>
+<p>検索結果</p>
+<table>
+    <tr th:each="data : ${todoNameList}" th:object="${data}">
+        <td th:text="'ID: ' + *{id}"></td>
+        <td th:text="'todo_name: ' + *{todoName}"></td>
+        <td th:text="'todo_time: ' + *{todoTime}"></td>
+    </tr>
+</table>
 </body>
 </html>
