@@ -15,4 +15,9 @@ public class todoService {
     public List<Message> showAllData(){
         return todoRepo.findAll();
     }
+
+    // todoName search
+    public List<Message> searchTodoName(String name) {
+        return todoRepo.findBytodoName(name);
+    }
 }

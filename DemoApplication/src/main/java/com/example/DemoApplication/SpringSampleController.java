@@ -34,6 +34,9 @@ public class SpringSampleController {
         model.addAttribute("message", form);
         List<Message> msgList = todoSer.showAllData();
         model.addAttribute("messageList", msgList);
+
+        List<Message> todoNameList = todoSer.searchTodoName("いえい");
+        model.addAttribute("todoNameList", todoNameList);
         return "confirm";
     }
 
