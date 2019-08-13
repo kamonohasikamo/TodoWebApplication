@@ -7,5 +7,12 @@
 <body>
     <p th:text="'入力されたTodoName：' + ${message.todoName}"/>
     <p th:text="'入力されたTodoTime：' + ${message.todoTime}"/>
+    <table>
+        <tr th:each="data : ${messageList}" th:object="${data}">
+            <td th:text="'ID: ' + *{id}"></td>
+            <td th:text="'todo_name: ' + *{todoName}"></td>
+            <td th:text="'todo_time: ' + *{todoTime}"></td>
+        </tr>
+    </table>
 </body>
 </html>
