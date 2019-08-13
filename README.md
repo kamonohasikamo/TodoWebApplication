@@ -36,13 +36,13 @@ JavaでTodoリストを管理するWebアプリケーションを作成します
   ```
 
 ## Database Infomation - データベースの情報
-- DataBaseName : sample_db
-- TableName : todolist
- - Id : There is no particular meaning.(?)<br>
+* DataBaseName : sample_db
+* TableName : todolist
+ * Id : There is no particular meaning.(?)<br>
   Int(5)
- -  todo_name : todo title<br>
+ * todo_name : todo title<br>
   varchar(255)
- - todo_time : todo deadline<br>
+ * todo_time : todo deadline<br>
   varchar(255)
 ```SQL:createDataBase
  CREATE DATABASE sample_db;
@@ -50,13 +50,13 @@ JavaでTodoリストを管理するWebアプリケーションを作成します
  CREATE TABLE todolist (id int(5), todo_name varchar(255), todo_time varchar(255));
 ```
 
-- データベース名 : sample_db
-- テーブル名 : todolist
- - Id : 特に意味はない(?)<br>
+* データベース名 : sample_db
+* テーブル名 : todolist
+ * Id : 特に意味はない(?)<br>
   Int(5)
- - todo_name : Todo名を格納する<br>
+ * todo_name : Todo名を格納する<br>
   varchar(255)
- - todo_time : Todoの期限を格納する<br>
+ * todo_time : Todoの期限を格納する<br>
   varchar(255)
 ```SQL:createDataBase
  CREATE DATABASE sample_db;
